@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: crud
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/coljuegos
+    username: postgres
+    password: admin
+  flyway:
+    enabled: true
+    baseline-version: 1
+    locations: "classpath:db/migration"
+  jpa:
+    database: postgresql
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  sql:
+    init:
+      platform: postgresql
+  jackson:
+    property-naming-strategy: SNAKE_CASE
