@@ -18,3 +18,23 @@ Clona este repositorio en tu máquina local usando el siguiente comando:
 ```bash
 git clone https://github.com/cosia/Coljuegos.git
 cd Coljuegos
+```
+
+### 2. Crear la base de datos
+
+Abre PostgreSQL y crea una nueva base de datos llamada coljuegos:
+
+```bash
+CREATE DATABASE coljuegos;
+```
+
+### 3. Actualizar las credenciales de la conexion a la base de datos
+
+Abre el archivo application.yml y actualiza con tus credenciales
+
+```yml
+username: [TU USUARIO]
+password: [TU CONTRASEÑA]
+```
+
+### 4. Ejecutar la applicación
