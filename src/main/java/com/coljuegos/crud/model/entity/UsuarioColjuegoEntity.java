@@ -28,4 +28,10 @@ public class UsuarioColjuegoEntity {
 
     @Column(name= "fecha_registro", updatable = false, nullable = false)
     private LocalDateTime fechaRegistro = LocalDateTime.now();
+
+    public void update(UsuarioColjuegoEntity entity){
+        this.correo = entity.getCorreo();
+        this.nombre = entity.getNombre();
+        this.password = entity.getPassword();
+    }
 }
