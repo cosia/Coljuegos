@@ -29,6 +29,13 @@ public class UsuarioColjuegoController {
         return ResponseEntity.ok(usuarios);
     }
 
+    @GetMapping("/find/{id}")
+    public ResponseEntity<UsuarioColjuegoDTO> findById(@PathVariable Long id){
+        log.info("UsuarioColjuegoController.findById id: {}", id);
+        UsuarioColjuegoEntity entity = this.service.findById(id);
+        return ResponseEntity.ok(this.mapper.toDto(entity));
+    }
+
     @PostMapping("/create")
     public ResponseEntity<UsuarioColjuegoDTO> create(@RequestBody UsuarioColjuegoDTO dto){
         log.info("UsuarioColjuegoController.create");
