@@ -17,13 +17,13 @@ public class UsuarioColjuegoEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "nombre")
+    @Column(name = "nombre", nullable = false)
     private String nombre;
 
-    @Column(name = "correo")
+    @Column(name = "correo", nullable = false)
     private String correo;
 
-    @Column(name = "password")
+    @Column(name = "password", nullable = false)
     private String password;
 
     @Column(name= "fecha_registro", updatable = false, nullable = false)
